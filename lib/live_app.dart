@@ -22,7 +22,7 @@ class _LiveAppState extends State<LiveApp> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-        backgroundColor: Colors.purpleAccent,
+        backgroundColor: Colors.tealAccent,
       ),
       body: ListView.separated(
         itemCount: 10,
