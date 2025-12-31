@@ -47,21 +47,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBLJh2X7nsalF__3jnQdbjOByg73ezVt2c',
-    appId: '1:9202682676:android:88628636f59b9daf7eb361',
-    messagingSenderId: '9202682676',
-    projectId: 'meatory-8dcf9',
-    databaseURL: 'https://meatory-8dcf9-default-rtdb.firebaseio.com',
-    storageBucket: 'meatory-8dcf9.firebasestorage.app',
+    apiKey: 'AIzaSyDO1wLmeWorb-gaGfP0FRwNBaIVvdwAZds',
+    appId: '1:171026127222:android:d979618fb576640d588257',
+    messagingSenderId: '171026127222',
+    projectId: 'test-72c80',
+    storageBucket: 'test-72c80.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB6zE84OLYdvRnLP0dvrB7dvY6PkajxST4',
-    appId: '1:9202682676:ios:302cec2c39fe3a967eb361',
-    messagingSenderId: '9202682676',
-    projectId: 'meatory-8dcf9',
-    databaseURL: 'https://meatory-8dcf9-default-rtdb.firebaseio.com',
-    storageBucket: 'meatory-8dcf9.firebasestorage.app',
+    apiKey: 'AIzaSyD3dbvLlT5AY4GbLuBaoV3Hz_f--ZthVMw',
+    appId: '1:171026127222:ios:940b605e91973ab7588257',
+    messagingSenderId: '171026127222',
+    projectId: 'test-72c80',
+    storageBucket: 'test-72c80.firebasestorage.app',
     iosBundleId: 'com.example.liveScore',
   );
 

@@ -11,8 +11,6 @@ class LiveApp extends StatefulWidget {
 class _LiveAppState extends State<LiveApp> {
   final List<FootballMatch> _footballMatches = [];
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +20,7 @@ class _LiveAppState extends State<LiveApp> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-        backgroundColor: Colors.tealAccent,
+        backgroundColor: Colors.purpleAccent,
       ),
       body: ListView.separated(
         itemCount: 10,
