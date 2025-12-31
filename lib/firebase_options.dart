@@ -62,15 +62,4 @@ class DefaultFirebaseOptions {
     storageBucket: 'test-72c80.firebasestorage.app',
     iosBundleId: 'com.example.liveScore',
   );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAVWsjI6DMnC8Hds5EHmhMXdLn3clRExVE',
-    appId: '1:9202682676:web:17851324a43816227eb361',
-    messagingSenderId: '9202682676',
-    projectId: 'meatory-8dcf9',
-    authDomain: 'meatory-8dcf9.firebaseapp.com',
-    databaseURL: 'https://meatory-8dcf9-default-rtdb.firebaseio.com',
-    storageBucket: 'meatory-8dcf9.firebasestorage.app',
-    measurementId: 'G-1SZQQ889EH',
-  );
 }
