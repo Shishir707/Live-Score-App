@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "9202682676",
+    "firebase_url": "https://meatory-8dcf9-default-rtdb.firebaseio.com",
+    "project_id": "meatory-8dcf9",
+    "storage_bucket": "meatory-8dcf9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9202682676:android:88628636f59b9daf7eb361",
+        "android_client_info": {
+          "package_name": "com.example.live_score"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLJh2X7nsalF__3jnQdbjOByg73ezVt2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
