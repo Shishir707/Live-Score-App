@@ -35,7 +35,7 @@ class _LiveAppState extends State<LiveApp> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Live Score App",
+          "⚽ Football Live Score",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
