@@ -48,21 +48,20 @@ class _LiveAppState extends State<LiveApp> {
           return ListTile(
             leading: CircleAvatar(
               radius: 10,
-              backgroundColor: match.isRunning ? Colors.red: Colors.grey,
+              backgroundColor: match.isRunning ? Colors.red : Colors.grey,
             ),
             title: Text(
               "${match.team1Name} VS ${match.team2Name}",
-              style: TextStyle(fontWeight: FontWeight.w600),
+              style: TextTheme.of(context).titleLarge,
             ),
             subtitle: Text(
-                match.winnerTeam.isEmpty ?
-                "Winner Team : Pending..." : "Winner Team : ${match.winnerTeam}"
+              match.winnerTeam.isEmpty
+                  ? "Winner Team : Pending..."
+                  : "Winner Team : ${match.winnerTeam}",
             ),
             trailing: Text(
               "${match.team1Score}:${match.team2Score}",
-              style: TextTheme
-                  .of(context)
-                  .titleLarge,
+              style: TextTheme.of(context).titleLarge,
             ),
           );
         },
