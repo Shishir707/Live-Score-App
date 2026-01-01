@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'model_class.dart';
 
@@ -10,6 +11,24 @@ class LiveApp extends StatefulWidget {
 
 class _LiveAppState extends State<LiveApp> {
   final List<FootballMatch> _footballMatches = [];
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+
+  @override
+  initState() {
+    super.initState();
+    _fetchDatabase();
+  }
+
+  Future<void> _fetchDatabase() async {
+    _footballMatches.clear();
+    QuerySnapshot<Map<String, dynamic>> snapshot = await _firestore
+        .collection('Football')
+        .get();
+    for (QueryDocumentSnapshot<Map<String, dynamic>> doc in snapshot.docs) {
+      _footballMatches.add(FootballMatch.fromJson(doc.data()));
+    }
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +42,28 @@ class _LiveAppState extends State<LiveApp> {
         backgroundColor: Colors.purpleAccent,
       ),
       body: ListView.separated(
-        itemCount: 10,
+        itemCount: _footballMatches.length,
         itemBuilder: (context, index) {
+          final match = _footballMatches[index];
           return ListTile(
-            leading: CircleAvatar(radius: 8, backgroundColor: Colors.green),
-            title: Text("Bangladesh VS Australia"),
-            subtitle: Text("Winner Team: Pending..."),
-            trailing: Text("2:3", style: TextTheme.of(context).titleLarge),
+            leading: CircleAvatar(
+              radius: 10,
+              backgroundColor: match.isRunning ? Colors.red: Colors.grey,
+            ),
+            title: Text(
+              "${match.team1Name} VS ${match.team2Name}",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            subtitle: Text(
+                match.winnerTeam.isEmpty ?
+                "Winner Team : Pending..." : "Winner Team : ${match.winnerTeam}"
+            ),
+            trailing: Text(
+              "${match.team1Score}:${match.team2Score}",
+              style: TextTheme
+                  .of(context)
+                  .titleLarge,
+            ),
           );
         },
         separatorBuilder: (context, index) {
@@ -39,4 +73,3 @@ class _LiveAppState extends State<LiveApp> {
     );
   }
 }
-
